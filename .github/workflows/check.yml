@@ -14,7 +14,8 @@ jobs:
         run: npm ci
       - name: lint
         run: npm run lint
-  tests: 
+  tests:
+    needs: [lint]
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout
